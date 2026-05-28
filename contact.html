@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=2">
+    <link rel="stylesheet" href="styles.css?v=4">
 </head>
 <body>
     <div class="grain"></div>
@@ -47,7 +47,7 @@ FORMATION</a>
         <div id="mobile-menu" class="fixed inset-0 bg-[var(--bg-dark)] z-40 flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-opacity duration-300">
             <a href="index.html" class="font-display text-4xl text-[var(--text)] hover:text-[var(--accent)] transition-colors">Accueil</a>
             <a href="about.html" class="font-display text-4xl text-[var(--text)] hover:text-[var(--accent)] transition-colors">À propos</a>
-            <a href="experience.html" class="font-display text-4xl text-[var(--text)] hover:text-[var(--accent)] transition-colors">Parcours</a>
+            <a href="experience.html" class="font-display text-4xl text-[var(--text)] hover:text-[var(--accent)] transition-colors">Expériences & Formation</a>
             <a href="contact.html" class="font-display text-4xl text-[var(--accent)]">Contact</a>
             <button id="menu-close" class="absolute top-6 right-6 text-[var(--text)]">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -57,15 +57,15 @@ FORMATION</a>
         </div>
 
         <!-- Hero Section -->
-        <section class="min-h-[50vh] flex items-end relative pt-32 pb-20 px-6 lg:px-12">
-            <div class="max-w-7xl mx-auto w-full">
+        <section class="min-h-[50vh] flex items-end relative pt-20 pb-12 px-2 sm:px-3 md:px-6 lg:px-12">
+            <div class="max-w-full sm:max-w-7xl mx-auto w-full">
                 <div class="reveal">
-                    <span class="text-[var(--accent)] text-sm uppercase tracking-[0.3em] font-medium block mb-6">Prenons contact</span>
-                    <h1 class="font-display font-bold text-5xl md:text-7xl lg:text-8xl leading-[0.9] mb-8">
+                    <span class="text-[var(--accent)] text-[10px] sm:text-xs uppercase tracking-[0.2em] font-medium block mb-3 sm:mb-4 md:mb-6">Prenons contact</span>
+                    <h1 class="font-display font-bold text-3xl sm:text-4xl md:text-5xl lg:text-8xl leading-[0.9] mb-4 sm:mb-6 md:mb-8">
                         PARLONS<br>
                         <span class="text-[var(--accent)]">ENSEMBLE</span>
                     </h1>
-                    <p class="text-[var(--text-muted)] text-xl max-w-2xl leading-relaxed">
+                    <p class="text-[var(--text-muted)] text-sm sm:text-base md:text-xl max-w-2xl leading-relaxed">
                         Je suis disponible pour un stage en comptabilité ou contrôle de gestion. 
                         Minimum 2 mois, disponible immédiatement.
                     </p>
@@ -74,9 +74,9 @@ FORMATION</a>
         </section>
 
         <!-- Contact Cards -->
-        <section class="py-20 px-6 lg:px-12">
-            <div class="max-w-6xl mx-auto">
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <section class="py-16 px-2 sm:px-3 md:px-6 lg:px-12">
+            <div class="max-w-full sm:max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
                     <!-- Email -->
                     <a href="mailto:baoury444@gmail.com" class="reveal contact-card group">
                         <div class="icon-circle mb-6">
@@ -127,41 +127,41 @@ FORMATION</a>
         </section>
 
         <!-- CTA Section -->
-        <section class="py-20 px-6 lg:px-12">
-            <div class="max-w-4xl mx-auto">
-                <div class="reveal bg-gradient-to-br from-[var(--bg-warm)] to-[var(--bg-dark)] border border-[var(--border)] rounded-3xl p-12 md:p-16 text-center relative overflow-hidden">
+        <section class="py-16 px-2 sm:px-3 md:px-6 lg:px-12">
+            <div class="max-w-full sm:max-w-4xl mx-auto">
+                <div class="reveal bg-gradient-to-br from-[var(--bg-warm)] to-[var(--bg-dark)] border border-[var(--border)] rounded-3xl p-6 sm:p-8 md:p-12 lg:p-16 text-center relative overflow-hidden">
                     <!-- Decorative elements -->
                     <div class="absolute top-0 right-0 w-32 h-32 bg-[var(--accent)] opacity-10 rounded-full blur-3xl"></div>
                     <div class="absolute bottom-0 left-0 w-40 h-40 bg-[var(--accent)] opacity-10 rounded-full blur-3xl"></div>
                     
                     <div class="relative z-10">
-                        <h2 class="font-display text-3xl md:text-4xl font-bold mb-6">Intéressé par mon profil ?</h2>
-                        <p class="text-[var(--text-muted)] max-w-lg mx-auto mb-10">
+                        <h2 class="font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">Intéressé par mon profil ?</h2>
+                        <p class="text-[var(--text-muted)] max-w-lg mx-auto mb-6 sm:mb-8 md:mb-10 text-xs sm:text-sm md:text-base">
                             Je recherche un stage en comptabilité ou contrôle de gestion pour mettre mes compétences au service de votre entreprise.
                         </p>
                         
-                        <a href="mailto:baoury444@gmail.com?subject=Proposition de stage&body=Bonjour Oury,%0D%0A%0D%0AJe vous contacte au sujet d'une opportunité de stage..." class="btn-primary text-lg px-12 py-4 inline-flex">
+                        <a href="mailto:baoury444@gmail.com?subject=Proposition de stage&body=Bonjour Oury,%0D%0A%0D%0AJe vous contacte au sujet d'une opportunité de stage..." class="btn-primary text-sm sm:text-base md:text-lg px-6 sm:px-8 md:px-12 py-2 sm:py-3 md:py-4 inline-flex">
                             Envoyer un email
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                             </svg>
                         </a>
                         
-                        <div class="mt-8 flex flex-wrap justify-center gap-6 text-sm text-[var(--text-muted)]">
+                        <div class="mt-6 sm:mt-8 flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 text-[10px] sm:text-xs md:text-sm text-[var(--text-muted)]">
                             <span class="flex items-center gap-2">
-                                <svg class="w-4 h-4 text-[var(--accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-3 h-3 sm:w-4 sm:h-4 text-[var(--accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                                 </svg>
                                 Réponse rapide
                             </span>
                             <span class="flex items-center gap-2">
-                                <svg class="w-4 h-4 text-[var(--accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-3 h-3 sm:w-4 sm:h-4 text-[var(--accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                                 </svg>
                                 Disponible immédiatement
                             </span>
                             <span class="flex items-center gap-2">
-                                <svg class="w-4 h-4 text-[var(--accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-3 h-3 sm:w-4 sm:h-4 text-[var(--accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                                 </svg>
                                 Flexible sur la durée
@@ -173,31 +173,31 @@ FORMATION</a>
         </section>
 
         <!-- Quick Links -->
-        <section class="py-16 px-6 lg:px-12 border-t border-[var(--border)]">
-            <div class="max-w-6xl mx-auto">
-                <div class="reveal flex flex-wrap justify-center gap-8 md:gap-16">
-                    <a href="index.html" class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors text-lg">Accueil</a>
-                    <a href="about.html" class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors text-lg">À propos</a>
-                    <a href="experience.html" class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors text-lg">Parcours</a>
-                    <span class="text-[var(--accent)] text-lg">Contact</span>
+        <section class="py-12 px-2 sm:px-3 md:px-6 lg:px-12 border-t border-[var(--border)]">
+            <div class="max-w-full sm:max-w-6xl mx-auto">
+                <div class="reveal flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-8 lg:gap-16">
+                    <a href="index.html" class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors text-sm sm:text-base md:text-lg">Accueil</a>
+                    <a href="about.html" class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors text-sm sm:text-base md:text-lg">À propos</a>
+                    <a href="experience.html" class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors text-sm sm:text-base md:text-lg">EXPÉRIENCES & FORMATION</a>
+                    <span class="text-[var(--accent)] text-sm sm:text-base md:text-lg">Contact</span>
                 </div>
             </div>
         </section>
 
         <!-- Footer -->
-        <footer class="py-12 px-6 lg:px-12 border-t border-[var(--border)]">
-            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-                <div class="font-display text-2xl font-bold">
+        <footer class="py-10 px-2 sm:px-3 md:px-6 lg:px-12 border-t border-[var(--border)]">
+            <div class="max-w-full sm:max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6">
+                <div class="font-display text-lg sm:text-xl md:text-2xl font-bold">
                     OB<span class="text-[var(--accent)]">.</span>
                 </div>
-                <div class="text-[var(--text-muted)] text-sm">
+                <div class="text-[var(--text-muted)] text-[10px] sm:text-xs md:text-sm">
                     © 2026 Oury Bah — Étudiant Paris-Saclay
                 </div>
-                <div class="flex items-center gap-6">
-                    <a href="index.html" class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors text-sm">Accueil</a>
-                    <a href="about.html" class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors text-sm">À propos</a>
-                    <a href="experience.html" class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors text-sm">Parcours</a>
-                    <a href="contact.html" class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors text-sm">Contact</a>
+                <div class="flex items-center gap-3 sm:gap-4 md:gap-6">
+                    <a href="index.html" class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors text-[10px] sm:text-xs md:text-sm">Accueil</a>
+                    <a href="about.html" class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors text-[10px] sm:text-xs md:text-sm">À propos</a>
+                    <a href="experience.html" class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors text-[10px] sm:text-xs md:text-sm">EXPÉRIENCES & FORMATION</a>
+                    <a href="contact.html" class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors text-[10px] sm:text-xs md:text-sm">Contact</a>
                 </div>
             </div>
         </footer>
