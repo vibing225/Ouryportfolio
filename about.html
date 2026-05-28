@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos — Oury Bah</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=2">
+</head>
+<body>
+    <div class="grain"></div>
+    <div class="cursor-dot hidden md:block" id="cursor-dot"></div>
+    <div class="cursor-outline hidden md:block" id="cursor-outline"></div>
+    
+    <div class="page-wrapper">
+        <!-- Navigation -->
+        <nav class="fixed top-0 left-0 right-0 z-50 px-6 lg:px-12 py-6 bg-[var(--bg-dark)]/80 backdrop-blur-md">
+            <div class="max-w-7xl mx-auto flex items-center justify-between">
+                <a href="index.html" class="font-display text-2xl font-bold tracking-tight">
+                    OB<span class="text-[var(--accent)]">.</span>
+                </a>
+                
+                <div class="hidden md:flex items-center gap-10">
+                    <a href="index.html" class="nav-link text-sm uppercase tracking-widest text-[var(--text-muted)] hover:text-[var(--text)] transition-colors">Accueil</a>
+                    <a href="about.html" class="nav-link text-sm uppercase tracking-widest text-[var(--accent)]">À propos</a>
+                    <a href="experience.html" class="nav-link text-sm uppercase tracking-widest text-[var(--text-muted)] hover:text-[var(--text)] transition-colors">EXPÉRIENCES &
+FORMATION</a>
+                    <a href="contact.html" class="nav-link text-sm uppercase tracking-widest text-[var(--text-muted)] hover:text-[var(--text)] transition-colors">Contact</a>
+                </div>
+                
+                <button id="menu-toggle" class="md:hidden text-[var(--text)]">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="fixed inset-0 bg-[var(--bg-dark)] z-40 flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none">
+            <a href="index.html" class="font-display text-4xl text-[var(--text)] hover:text-[var(--accent)] transition-colors">Accueil</a>
+            <a href="about.html" class="font-display text-4xl text-[var(--accent)]">À propos</a>
+            <a href="experience.html" class="font-display text-4xl text-[var(--text)] hover:text-[var(--accent)] transition-colors">Parcours</a>
+            <a href="contact.html" class="font-display text-4xl text-[var(--text)] hover:text-[var(--accent)] transition-colors">Contact</a>
+            <button id="menu-close" class="absolute top-6 right-6 text-[var(--text)]">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="min-h-[50vh] flex items-center relative pt-32 pb-20 px-6 lg:px-12">
+            <div class="max-w-7xl mx-auto w-full">
+                <div class="reveal">
+                    <span class="text-[var(--accent)] text-sm uppercase tracking-[0.3em] font-medium block mb-6">À propos</span>
+                    <h1 class="font-display font-bold text-5xl md:text-7xl lg:text-8xl leading-[0.9] mb-8">
+                        Oury Bah
+                    </h1>
+                    <p class="text-[var(--text-muted)] text-xl md:text-2xl max-w-2xl leading-relaxed mb-6">
+                        Étudiant franco-guinéen en BUT 3 GEA à Paris-Saclay. Passionné par la comptabilité, le contrôle de gestion et l'impact économique.
+                    </p>
+                    <p class="text-[var(--accent)] text-lg md:text-xl max-w-2xl leading-relaxed font-display italic">
+                        "Je lis pour comprendre, j'agis pour construire, je voyage pour mieux revenir."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="py-20 px-6 lg:px-12">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-16 items-start">
+                    <!-- Left: Story -->
+                    <div class="reveal">
+                        <h2 class="font-display text-3xl md:text-4xl font-bold mb-8">Mon parcours</h2>
+                        
+                        <div class="space-y-6 text-[var(--text-muted)] text-lg leading-relaxed">
+                            <p>
+                                D'une licence en comptabilité en Guinée à un BUT à Paris-Saclay, mon parcours est marqué par des expériences concrètes dans des entreprises comme <strong class="text-[var(--text)]">Orange Guinée</strong>, <strong class="text-[var(--text)]">Ninkasi</strong> et <strong class="text-[var(--text)]">Ravensera</strong>.
+                            </p>
+                            
+                            <p>
+                                Ce qui me distingue, c'est ma capacité à naviguer entre cultures, environnements et disciplines. Je lis Hannah Arendt et analyse des bilans comptables avec le même appétit intellectuel.
+                            </p>
+                            
+                            <p>
+                                Mon objectif : allier rigueur analytique et vision stratégique pour contribuer au développement économique de la Guinée.
+                            </p>
+                        </div>
+                        
+                        <div class="mt-10 flex flex-wrap gap-4">
+                            <a href="experience.html" class="btn-primary">
+                                Voir mon parcours
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Right: Quick Facts -->
+                    <div class="reveal space-y-6" style="transition-delay: 0.2s;">
+                        <div class="info-card">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-full bg-[var(--accent)]/10 flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-[var(--accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="text-sm text-[var(--text-muted)] uppercase tracking-wider mb-1">Localisation</div>
+                                    <div class="text-lg font-medium">Fontenay-aux-Roses, Île-de-France</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-full bg-[var(--accent)]/10 flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-[var(--accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="text-sm text-[var(--text-muted)] uppercase tracking-wider mb-1">Formation</div>
+                                    <div class="text-lg font-medium">BUT 3 GEA — Paris-Saclay</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-full bg-[var(--accent)]/10 flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-[var(--accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="text-sm text-[var(--text-muted)] uppercase tracking-wider mb-1">Disponibilité</div>
+                                    <div class="text-lg font-medium text-[var(--accent)]">Stage immédiat — min. 2 mois</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-full bg-[var(--accent)]/10 flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-[var(--accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="text-sm text-[var(--text-muted)] uppercase tracking-wider mb-1">Objectif</div>
+                                    <div class="text-lg font-medium">Auditeur · Consultant · Cabinet propre</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="py-20 px-6 lg:px-12 bg-[var(--bg-warm)]">
+            <div class="max-w-7xl mx-auto">
+                <div class="reveal mb-12">
+                    <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Compétences & Langues</h2>
+                    <p class="text-[var(--text-muted)] max-w-xl">Un équilibre entre expertise technique et compétences transversales.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Left column -->
+                    <div class="reveal space-y-6" style="transition-delay: 0.1s;">
+                        <div class="info-card">
+                            <h3 class="font-display text-xl font-semibold mb-4 text-[var(--accent)]">Comptabilité & Finance</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="flex justify-between mb-2">
+                                        <span class="text-sm">Comptabilité générale</span>
+                                        <span class="text-sm text-[var(--accent)]">95%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" data-width="95%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-2">
+                                        <span class="text-sm">Analyse financière</span>
+                                        <span class="text-sm text-[var(--accent)]">90%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" data-width="90%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-2">
+                                        <span class="text-sm">Contrôle de gestion</span>
+                                        <span class="text-sm text-[var(--accent)]">85%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" data-width="85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card">
+                            <h3 class="font-display text-xl font-semibold mb-4 text-[var(--accent)]">Outils</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-[var(--bg-dark)] rounded-full text-sm">Excel avancé</span>
+                                <span class="px-3 py-1 bg-[var(--bg-dark)] rounded-full text-sm">Oracle e-Business</span>
+                                <span class="px-3 py-1 bg-[var(--bg-dark)] rounded-full text-sm">ERP</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right column -->
+                    <div class="reveal space-y-6" style="transition-delay: 0.2s;">
+                        <div class="info-card">
+                            <h3 class="font-display text-xl font-semibold mb-4 text-[var(--accent)]">Langues</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="flex justify-between mb-2">
+                                        <span class="text-sm font-medium">Poular</span>
+                                        <span class="text-sm text-[var(--accent)]">Langue maternelle</span>
+                                    </div>
+                                    <div class="progress-bar mt-2">
+                                        <div class="progress-fill" data-width="100%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-2">
+                                        <span class="text-sm font-medium">Soussou</span>
+                                        <span class="text-sm text-[var(--accent)]">Courant</span>
+                                    </div>
+                                    <div class="progress-bar mt-2">
+                                        <div class="progress-fill" data-width="95%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-2">
+                                        <span class="text-sm font-medium">Français</span>
+                                        <span class="text-sm text-[var(--accent)]">Courant (C1)</span>
+                                    </div>
+                                    <div class="progress-bar mt-2">
+                                        <div class="progress-fill" data-width="98%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-2">
+                                        <span class="text-sm font-medium">Anglais</span>
+                                        <span class="text-sm text-[var(--accent)]">Niveau C1</span>
+                                    </div>
+                                    <div class="progress-bar mt-2">
+                                        <div class="progress-fill" data-width="85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card">
+                            <h3 class="font-display text-xl font-semibold mb-4 text-[var(--accent)]">Transversal</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-[var(--bg-dark)] rounded-full text-sm">Marketing digital</span>
+                                <span class="px-3 py-1 bg-[var(--bg-dark)] rounded-full text-sm">Agile</span>
+                                <span class="px-3 py-1 bg-[var(--bg-dark)] rounded-full text-sm">Interculturel</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DIYA Vision Section -->
+        <section class="py-20 px-6 lg:px-12">
+            <div class="max-w-7xl mx-auto">
+                <div class="reveal">
+                    <div class="bg-gradient-to-br from-[var(--bg-warm)] to-[var(--bg-dark)] border border-[var(--border)] rounded-3xl p-12 md:p-16 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-64 h-64 bg-[var(--accent)] opacity-10 rounded-full blur-3xl"></div>
+                        <div class="absolute bottom-0 left-0 w-48 h-48 bg-[var(--accent)] opacity-10 rounded-full blur-3xl"></div>
+                        
+                        <div class="relative z-10">
+                            <span class="text-[var(--accent)] text-sm uppercase tracking-[0.3em] font-medium block mb-6">Projet Entrepreneurial</span>
+                            <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">DIYA Vision</h2>
+                            <p class="text-[var(--text-muted)] text-lg leading-relaxed mb-6 max-w-3xl">
+                                <span class="text-[var(--accent)] font-semibold">DIYA</span> signifie lumière en Malinke — c'est le nom que j'ai choisi pour mon projet de cabinet d'audit et de conseil en Guinée.
+                            </p>
+                            <p class="text-[var(--text-muted)] text-lg leading-relaxed mb-8 max-w-3xl">
+                                Trop d'entreprises africaines prennent des décisions sans outils de pilotage fiables. DIYA Vision a vocation à combler ce manque — en apportant une expertise rigoureuse, adaptée aux réalités locales et accessible aux petites structures.
+                            </p>
+                            <div class="bg-[var(--accent)]/10 border border-[var(--accent)] rounded-2xl p-6 inline-block">
+                                <p class="font-display text-xl font-semibold text-[var(--accent)]">"Éclairer la décision, sécuriser la performance."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-12 px-6 lg:px-12 border-t border-[var(--border)]">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="font-display text-2xl font-bold">
+                    OB<span class="text-[var(--accent)]">.</span>
+                </div>
+                <div class="text-[var(--text-muted)] text-sm">
+                    © 2026 Oury Bah — Étudiant Paris-Saclay
+                </div>
+                <div class="flex items-center gap-6">
+                    <a href="index.html" class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors text-sm">Accueil</a>
+                    <a href="about.html" class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors text-sm">À propos</a>
+                    <a href="experience.html" class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors text-sm">Parcours</a>
+                    <a href="contact.html" class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors text-sm">Contact</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Custom cursor
+        const cursorDot = document.getElementById('cursor-dot');
+        const cursorOutline = document.getElementById('cursor-outline');
+        
+        window.addEventListener('mousemove', (e) => {
+            const posX = e.clientX;
+            const posY = e.clientY;
+            
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
+            
+            cursorOutline.animate({
+                left: `${posX}px`,
+                top: `${posY}px`
+            }, { duration: 500, fill: "forwards" });
+        });
+        
+        // Mobile menu
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+            mobileMenu.classList.add('opacity-100', 'pointer-events-auto');
+        });
+        
+        menuClose.addEventListener('click', () => {
+            mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+            mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
+        });
+        
+        // Scroll reveal
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    
+                    // Animate progress bars
+                    if (entry.target.querySelectorAll('.progress-fill').length > 0) {
+                        entry.target.querySelectorAll('.progress-fill').forEach(bar => {
+                            bar.style.width = bar.dataset.width;
+                        });
+                    }
+                    
+                    // Animate counters
+                    if (entry.target.querySelectorAll('.stat-number').length > 0) {
+                        entry.target.querySelectorAll('.stat-number').forEach(counter => {
+                            const target = parseInt(counter.dataset.target);
+                            let current = 0;
+                            const increment = target / 50;
+                            const timer = setInterval(() => {
+                                current += increment;
+                                if (current >= target) {
+                                    counter.textContent = target;
+                                    clearInterval(timer);
+                                } else {
+                                    counter.textContent = Math.floor(current);
+                                }
+                            }, 30);
+                        });
+                    }
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcours — Oury Bah</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=2">
+</head>
+<body>
+    <div class="grain"></div>
+    <div class="cursor-dot hidden md:block" id="cursor-dot"></div>
+    <div class="cursor-outline hidden md:block" id="cursor-outline"></div>
+    
+    <div class="page-wrapper">
+        <!-- Navigation -->
+        <nav class="fixed top-0 left-0 right-0 z-50 px-6 lg:px-12 py-6 bg-[var(--bg-dark)]/80 backdrop-blur-md">
+            <div class="max-w-7xl mx-auto flex items-center justify-between">
+                <a href="index.html" class="font-display text-2xl font-bold tracking-tight">
+                    OB<span class="text-[var(--accent)]">.</span>
+                </a>
+                
+                <div class="hidden md:flex items-center gap-10">
+                    <a href="index.html" class="nav-link text-sm uppercase tracking-widest text-[var(--text-muted)] hover:text-[var(--text)] transition-colors">Accueil</a>
+                    <a href="about.html" class="nav-link text-sm uppercase tracking-widest text-[var(--text-muted)] hover:text-[var(--text)] transition-colors">À propos</a>
+                    <a href="experience.html" class="nav-link text-sm uppercase tracking-widest text-[var(--accent)]">EXPÉRIENCES &
+FORMATION</a>
+                    <a href="contact.html" class="nav-link text-sm uppercase tracking-widest text-[var(--text-muted)] hover:text-[var(--text)] transition-colors">Contact</a>
+                </div>
+                
+                <button id="menu-toggle" class="md:hidden text-[var(--text)]">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="fixed inset-0 bg-[var(--bg-dark)] z-40 flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-opacity duration-300">
+            <a href="index.html" class="font-display text-4xl text-[var(--text)] hover:text-[var(--accent)] transition-colors">Accueil</a>
+            <a href="about.html" class="font-display text-4xl text-[var(--text)] hover:text-[var(--accent)] transition-colors">À propos</a>
+            <a href="experience.html" class="font-display text-4xl text-[var(--accent)]">Parcours</a>
+            <a href="contact.html" class="font-display text-4xl text-[var(--text)] hover:text-[var(--accent)] transition-colors">Contact</a>
+            <button id="menu-close" class="absolute top-6 right-6 text-[var(--text)]">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="min-h-[50vh] flex items-end relative pt-32 pb-20 px-6 lg:px-12">
+            <div class="max-w-7xl mx-auto w-full">
+                <div class="reveal">
+                    <span class="text-[var(--accent)] text-sm uppercase tracking-[0.3em] font-medium block mb-6">Mon parcours</span>
+                    <h1 class="font-display font-bold text-5xl md:text-7xl lg:text-8xl leading-[0.9] mb-8">
+                        EXPÉRIENCES &<br>
+                        <span class="text-[var(--accent)]">FORMATION</span>
+                    </h1>
+                    <p class="text-[var(--text-muted)] text-xl max-w-2xl leading-relaxed">
+                        Un parcours entre deux continents, de la Guinée à la France, façonné par des expériences diverses dans la comptabilité, le contrôle de gestion et l'enseignement.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Legend -->
+        <section class="py-10 px-6 lg:px-12 border-y border-[var(--border)]">
+            <div class="max-w-7xl mx-auto flex flex-wrap gap-8 justify-center">
+                <div class="flex items-center gap-3">
+                    <span class="w-4 h-4 rounded-full bg-[var(--accent)]"></span>
+                    <span class="text-sm text-[var(--text-muted)]">Expérience professionnelle</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <span class="w-4 h-4 rounded-full bg-[var(--text-muted)]"></span>
+                    <span class="text-sm text-[var(--text-muted)]">Formation</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section class="py-20 px-6 lg:px-12">
+            <div class="max-w-5xl mx-auto timeline-container">
+                <div class="timeline-line" id="timeline-line"></div>
+                
+                <!-- BUT 3 GEA -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="exp-card edu">
+                        <div class="flex flex-wrap items-center gap-3 mb-4">
+                            <span class="badge badge-edu">Formation</span>
+                            <span class="text-sm text-[var(--text-muted)]">2025 – 2026</span>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-2">BUT 3 Gestion des Entreprises et des Administrations</h3>
+                        <p class="text-[var(--accent)] font-medium mb-3">IUT de Sceaux — Université Paris-Saclay</p>
+                        <ul class="space-y-2 text-sm text-[var(--text-muted)]">
+                            <li class="flex items-start gap-2">
+                                <span class="text-[var(--accent)] mt-1">—</span>
+                                <span>Analyser les processus de l'organisation dans son environnement</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[var(--accent)] mt-1">—</span>
+                                <span>Aider à la prise de décision — interprétation des données qualitatives et quantitatives</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[var(--accent)] mt-1">—</span>
+                                <span>Concevoir la stratégie de création de valeur</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[var(--accent)] mt-1">—</span>
+                                <span>Assurer la gestion et le développement de la chaîne de valeur</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ravensera -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="exp-card pro">
+                        <div class="flex flex-wrap items-center gap-3 mb-4">
+                            <span class="badge badge-pro">Poste actuel</span>
+                            <span class="text-sm text-[var(--text-muted)]">France</span>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-2">Business Developer</h3>
+                        <p class="text-[var(--accent)] font-medium mb-3">Ravensera (Artémus & 24 Terre)</p>
+                        <ul class="space-y-2 text-sm text-[var(--text-muted)]">
+                            <li class="flex items-start gap-2">
+                                <span class="text-[var(--accent)] mt-1">—</span>
+                                <span>Prospection et développement de nouveaux clients et partenaires B2B</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[var(--accent)] mt-1">—</span>
+                                <span>Fidélisation du portefeuille clients et suivi des relations commerciales</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[var(--accent)] mt-1">—</span>
+                                <span>Participation à la stratégie commerciale des deux marques</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[var(--accent)] mt-1">—</span>
+                                <span>Analyse du marché et identification des opportunités de croissance</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Ninkasi -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="exp-card pro">
+                        <div class="flex flex-wrap items-center gap-3 mb-4">
+                            <span class="badge badge-pro">Stage</span>
+                            <span class="text-sm text-[var(--text-muted)]">Mars – Avr. 2026</span>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-2">Assistant Cost Controller</h3>
+                        <p class="text-[var(--accent)] font-medium mb-3">Ninkasi Cordeliers — Lyon, France</p>
+                        <ul class="space-y-2 text-sm text-[var(--text-muted)]">
+                            <li class="flex items-start gap-2">
+                                <span class="text-[var(--accent)] mt-1">—</span>
+                                <span>Lancement et suivi des commandes</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[var(--accent)] mt-1">—</span>
+                                <span>Suivi et contrôle des stocks</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[var(--accent)] mt-1">—</span>
+                                <span>Inventaires et analyse des écarts</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Orange Guinée -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="exp-card pro">
+                        <div class="flex flex-wrap items-center gap-3 mb-4">
+                            <span class="badge badge-pro">Stage</span>
+                            <span class="text-sm text-[var(--text-muted)]">Jan. – Juin 2025</span>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-2">Assistant Comptable</h3>
+                        <p class="text-[var(--accent)] font-medium mb-3">Orange Guinée SA — Conakry</p>
+                        <ul class="space-y-2 text-sm text-[var(--text-muted)]">
+                            <li class="flex items-start gap-2">
+                                <span class="text-[var(--accent)] mt-1">—</span>
+                                <span>Traitement et vérification des factures fournisseurs</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[var(--accent)] mt-1">—</span>
+                                <span>Rapprochements bancaires et analyse des écarts sur Excel</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[var(--accent)] mt-1">—</span>
+                                <span>Suivi mensuel des amortissements d'équipements</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[var(--accent)] mt-1">—</span>
+                                <span>Participation aux clôtures comptables périodiques</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[var(--accent)] mt-1">—</span>
+                                <span>Utilisation du logiciel Oracle eBusiness</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Freelance -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="exp-card pro">
+                        <div class="flex flex-wrap items-center gap-3 mb-4">
+                            <span class="badge badge-pro">Freelance</span>
+                            <span class="text-sm text-[var(--text-muted)]">2023 – 2024</span>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-2">Services Digitaux</h3>
+                        <p class="text-[var(--accent)] font-medium mb-3">Conakry, Guinée</p>
+                        <ul class="space-y-2 text-sm text-[var(--text-muted)]">
+                            <li class="flex items-start gap-2">
+                                <span class="text-[var(--accent)] mt-1">—</span>
+                                <span>Prospection commerciale et développement du portefeuille clients</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[var(--accent)] mt-1">—</span>
+                                <span>Étude de marché et analyse des besoins clients</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[var(--accent)] mt-1">—</span>
+                                <span>Community management et création de contenu</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[var(--accent)] mt-1">—</span>
+                                <span>Création de sites web via outils no-code et IA</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Saticom -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="exp-card pro">
+                        <div class="flex flex-wrap items-center gap-3 mb-4">
+                            <span class="badge badge-pro">Stage</span>
+                            <span class="text-sm text-[var(--text-muted)]">Oct. – Nov. 2024</span>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-2">Assistant Comptable & Gestion de Stock</h3>
+                        <p class="text-[var(--accent)] font-medium mb-3">Saticom SAS — Conakry</p>
+                        <ul class="space-y-2 text-sm text-[var(--text-muted)]">
+                            <li class="flex items-start gap-2">
+                                <span class="text-[var(--accent)] mt-1">—</span>
+                                <span>Traitement des factures clients et fournisseurs</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[var(--accent)] mt-1">—</span>
+                                <span>Gestion du portefeuille clients et relations commerciales</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[var(--accent)] mt-1">—</span>
+                                <span>Contrôle des stocks — suivi des entrées/sorties et réapprovisionnement</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Baptist Learning Center -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="exp-card pro">
+                        <div class="flex flex-wrap items-center gap-3 mb-4">
+                            <span class="badge badge-pro">Mission rémunérée</span>
+                            <span class="text-sm text-[var(--text-muted)]">Avr. – Déc. 2024</span>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-2">Guide Linguistique & Culturel</h3>
+                        <p class="text-[var(--accent)] font-medium mb-3">Mission Baptiste de Guinée — Conakry</p>
+                        <ul class="space-y-2 text-sm text-[var(--text-muted)]">
+                            <li class="flex items-start gap-2">
+                                <span class="text-[var(--accent)] mt-1">—</span>
+                                <span>Cours de FLE (Français Langue Étrangère) adaptés aux apprenants</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[var(--accent)] mt-1">—</span>
+                                <span>Accompagnement culturel — ateliers culinaires, jeux de société</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[var(--accent)] mt-1">—</span>
+                                <span>Facilitation de l'intégration dans la culture guinéenne</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Licence 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="exp-card edu">
+                        <div class="flex flex-wrap items-center gap-3 mb-4">
+                            <span class="badge badge-edu">Formation</span>
+                            <span class="text-sm text-[var(--text-muted)]">2021 – 2023</span>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-2">Licence en Comptabilité de Gestion</h3>
+                        <p class="text-[var(--accent)] font-medium mb-3">Université Général Lansana Conté de Sonfonia — Conakry</p>
+                        <ul class="space-y-2 text-sm text-[var(--text-muted)]">
+                            <li class="flex items-start gap-2">
+                                <span class="text-[var(--accent)] mt-1">—</span>
+                                <span>Comptabilité générale — écritures comptables, états financiers, clôtures</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[var(--accent)] mt-1">—</span>
+                                <span>Finance — analyse financière, lecture et interprétation des bilans</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[var(--accent)] mt-1">—</span>
+                                <span>Contrôle de gestion — suivi budgétaire, analyse des écarts</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Formation Anglais -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="exp-card edu">
+                        <div class="flex flex-wrap items-center gap-3 mb-4">
+                            <span class="badge badge-edu">Formation</span>
+                            <span class="text-sm text-[var(--text-muted)]">2023</span>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-2">Formation en Anglais</h3>
+                        <p class="text-[var(--accent)] font-medium mb-3">American Corner — Bibliothèque Américaine, Conakry</p>
+                        <ul class="space-y-2 text-sm text-[var(--text-muted)]">
+                            <li class="flex items-start gap-2">
+                                <span class="text-[var(--accent)] mt-1">—</span>
+                                <span>Cours structurés et ateliers de conversation avec natifs américains</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[var(--accent)] mt-1">—</span>
+                                <span>Amélioration du niveau oral et aisance à l'écrit</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[var(--accent)] mt-1">—</span>
+                                <span>Bénévolat ultérieur — aide aux étudiants dans leur apprentissage</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Allah Wally -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="exp-card pro">
+                        <div class="flex flex-wrap items-center gap-3 mb-4">
+                            <span class="badge badge-pro">Emploi</span>
+                            <span class="text-sm text-[var(--text-muted)]">Nov. 2023 – Mars 2024</span>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-2">Caissier & Gestionnaire</h3>
+                        <p class="text-[var(--accent)] font-medium mb-3">Allah Wally Boulangerie — Kamsar</p>
+                        <ul class="space-y-2 text-sm text-[var(--text-muted)]">
+                            <li class="flex items-start gap-2">
+                                <span class="text-[var(--accent)] mt-1">—</span>
+                                <span>Gestion de caisse et transactions</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[var(--accent)] mt-1">—</span>
+                                <span>Accueil et fidélisation clientèle</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- The Bench -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="exp-card edu">
+                        <div class="flex flex-wrap items-center gap-3 mb-4">
+                            <span class="badge badge-edu">Formation</span>
+                            <span class="text-sm text-[var(--text-muted)]">1 mois</span>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-2">The Bench — Pré-Incubation Entrepreneuriale</h3>
+                        <p class="text-[var(--accent)] font-medium mb-3">En ligne</p>
+                        <ul class="space-y-2 text-sm text-[var(--text-muted)]">
+                            <li class="flex items-start gap-2">
+                                <span class="text-[var(--accent)] mt-1">—</span>
+                                <span>Étude de marché et analyse de faisabilité</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[var(--accent)] mt-1">—</span>
+                                <span>Construction d'un modèle économique</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[var(--accent)] mt-1">—</span>
+                                <span>Techniques de pitch et structuration de projet</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Baccalauréat -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="exp-card edu">
+                        <div class="flex flex-wrap items-center gap-3 mb-4">
+                            <span class="badge badge-edu">Formation</span>
+                            <span class="text-sm text-[var(--text-muted)]">2020</span>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-2">Baccalauréat Série Scientifique — Sciences Mathématiques</h3>
+                        <p class="text-[var(--accent)] font-medium mb-3">Lycée Albert Bauer — Conakry, Guinée</p>
+                        <ul class="space-y-2 text-sm text-[var(--text-muted)]">
+                            <li class="flex items-start gap-2">
+                                <span class="text-[var(--accent)] mt-1">—</span>
+                                <span>Développement d'un esprit analytique et rigoureux</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[var(--accent)] mt-1">—</span>
+                                <span>Statistiques, fonctions, physique-chimie</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Academic Projects Section -->
+        <section class="py-20 px-6 lg:px-12 bg-[var(--bg-warm)]">
+            <div class="max-w-7xl mx-auto">
+                <div class="reveal mb-12">
+                    <span class="text-[var(--accent)] text-sm uppercase tracking-[0.3em] font-medium block mb-6">Travaux & SAÉ — BUT GEA GEMA</span>
+                    <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Projets Académiques</h2>
+                    <p class="text-[var(--text-muted)] max-w-xl">Des projets concrets qui allient théorie et pratique, en équipe et en autonomie.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- EaseExpa -->
+                    <div class="reveal info-card" style="transition-delay: 0.1s;">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="badge badge-pro">SAé 5.01</span>
+                            <span class="text-sm text-[var(--text-muted)]">Note: 15,5/20</span>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-3">EaseExpa</h3>
+                        <p class="text-[var(--text-muted)] text-sm mb-4">Application mobile centralisant les services pour expatriés (logement, emploi, démarches administratives, intégration culturelle).</p>
+                        <div class="space-y-2 text-sm">
+                            <div><span class="text-[var(--accent)]">Mon rôle:</span> Présentation, étude de marché, stratégie de monétisation, budget prévisionnel</div>
+                            <div><span class="text-[var(--accent)]">Compétences:</span> Analyse de marché, modélisation financière, stratégie d'acquisition digitale</div>
+                        </div>
+                    </div>
+                    
+                    <!-- LoopParts -->
+                    <div class="reveal info-card" style="transition-delay: 0.2s;">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="badge badge-pro">Projet International</span>
+                            <span class="text-sm text-[var(--text-muted)]">France/Espagne</span>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-3">LoopParts</h3>
+                        <p class="text-[var(--text-muted)] text-sm mb-4">Fabrication de pièces de rechange en plastique recyclé via impression 3D sur campus universitaires.</p>
+                        <div class="space-y-2 text-sm">
+                            <div><span class="text-[var(--accent)]">Mon rôle:</span> Analyse PESTEL, Business Model Canvas, stratégie de développement</div>
+                            <div><span class="text-[var(--accent)]">Compétences:</span> Collaboration interculturelle, modèle économique viable, gestion de projet</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Valtoris -->
+                    <div class="reveal info-card" style="transition-delay: 0.3s;">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="badge badge-pro">Étude de Cas</span>
+                            <span class="text-sm text-[var(--text-muted)]">Conduite du changement</span>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-3">Cas VALTORIS</h3>
+                        <p class="text-[var(--text-muted)] text-sm mb-4">Accompagnement d'une PME industrielle de 135 salariés dans l'implémentation d'un ERP.</p>
+                        <div class="space-y-2 text-sm">
+                            <div><span class="text-[var(--accent)]">Mon rôle:</span> Communication et formation — messages clés, événement immersif, plan de formation</div>
+                            <div><span class="text-[var(--accent)]">Compétences:</span> Pilotage des parties prenantes, méthodologie Autissier & Moutot, management du changement</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Management Analysis -->
+                    <div class="reveal info-card" style="transition-delay: 0.4s;">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="badge badge-pro">SAé Management</span>
+                            <span class="text-sm text-[var(--text-muted)]">Analyse managériale</span>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-3">Analyse des Pratiques Managériales</h3>
+                        <p class="text-[var(--text-muted)] text-sm mb-4">Enquête terrain auprès de managers sur le cadrage et l'atteinte des objectifs.</p>
+                        <div class="space-y-2 text-sm">
+                            <div><span class="text-[var(--accent)]">Mon rôle:</span> Entretien avec Squad Leader au Crédit Lyonnais, analyse comparative</div>
+                            <div><span class="text-[var(--accent)]">Compétences:</span> Conduite d'entretien, mobilisation d'outils théoriques (Maslow, DESC, ICAP)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 px-6 lg:px-12">
+            <div class="max-w-7xl mx-auto">
+                <div class="bg-gradient-to-r from-[var(--bg-warm)] to-[var(--bg-dark)] border border-[var(--border)] rounded-3xl p-12 md:p-16 flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div>
+                        <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Convaincu ?</h2>
+                        <p class="text-[var(--text-muted)] max-w-md">Je suis disponible pour un stage en comptabilité ou contrôle de gestion.</p>
+                    </div>
+                    <a href="contact.html" class="btn-primary text-lg px-10 py-4">
+                        Me contacter
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-12 px-6 lg:px-12 border-t border-[var(--border)]">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="font-display text-2xl font-bold">
+                    OB<span class="text-[var(--accent)]">.</span>
+                </div>
+                <div class="text-[var(--text-muted)] text-sm">
+                    © 2026 Oury Bah — Étudiant Paris-Saclay
+                </div>
+                <div class="flex items-center gap-6">
+                    <a href="index.html" class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors text-sm">Accueil</a>
+                    <a href="about.html" class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors text-sm">À propos</a>
+                    <a href="experience.html" class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors text-sm">Parcours</a>
+                    <a href="contact.html" class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors text-sm">Contact</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Custom cursor
+        const cursorDot = document.getElementById('cursor-dot');
+        const cursorOutline = document.getElementById('cursor-outline');
+        
+        window.addEventListener('mousemove', (e) => {
+            const posX = e.clientX;
+            const posY = e.clientY;
+            
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
+            
+            cursorOutline.animate({
+                left: `${posX}px`,
+                top: `${posY}px`
+            }, { duration: 500, fill: "forwards" });
+        });
+        
+        // Mobile menu
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+            mobileMenu.classList.add('opacity-100', 'pointer-events-auto');
+        });
+        
+        menuClose.addEventListener('click', () => {
+            mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+            mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
+        });
+        
+        // Timeline animation
+        const timelineLine = document.getElementById('timeline-line');
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        
+        const timelineObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if (entry.target === timelineLine) {
+                        entry.target.classList.add('active');
+                    } else {
+                        entry.target.classList.add('visible');
+                    }
+                }
+            });
+        }, { threshold: 0.2 });
+        
+        if (timelineLine) timelineObserver.observe(timelineLine);
+        timelineItems.forEach(item => timelineObserver.observe(item));
+        
+        // Reveal animation
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
