@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=3">
+    <link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body>
     <div class="grain"></div>
@@ -17,7 +17,7 @@
     
     <div class="page-wrapper">
         <!-- Navigation -->
-        <nav class="fixed top-0 left-0 right-0 z-50 px-6 lg:px-12 py-6 bg-[var(--bg-dark)]/80 backdrop-blur-md">
+        <nav class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-12 py-4 sm:py-6 bg-[var(--bg-dark)]/80 backdrop-blur-md">
             <div class="max-w-7xl mx-auto flex items-center justify-between">
                 <a href="index.html" class="font-display text-2xl font-bold tracking-tight">
                     OB<span class="text-[var(--accent)]">.</span>
@@ -26,8 +26,8 @@
                 <div class="hidden md:flex items-center gap-10">
                     <a href="index.html" class="nav-link text-sm uppercase tracking-widest text-[var(--text-muted)] hover:text-[var(--text)] transition-colors">Accueil</a>
                     <a href="about.html" class="nav-link text-sm uppercase tracking-widest text-[var(--text-muted)] hover:text-[var(--text)] transition-colors">À propos</a>
-                    <a href="experience.html" class="nav-link text-sm uppercase tracking-widest text-[var(--accent)]">EXPÉRIENCES</a>
                     <a href="formations.html" class="nav-link text-sm uppercase tracking-widest text-[var(--text-muted)] hover:text-[var(--text)] transition-colors">Formations</a>
+                    <a href="experience.html" class="nav-link text-sm uppercase tracking-widest text-[var(--accent)]">Expériences</a>
                     <a href="contact.html" class="nav-link text-sm uppercase tracking-widest text-[var(--text-muted)] hover:text-[var(--text)] transition-colors">Contact</a>
                 </div>
                 
@@ -43,8 +43,8 @@
         <div id="mobile-menu" class="fixed inset-0 bg-[var(--bg-dark)] z-40 flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-opacity duration-300">
             <a href="index.html" class="font-display text-4xl text-[var(--text)] hover:text-[var(--accent)] transition-colors">Accueil</a>
             <a href="about.html" class="font-display text-4xl text-[var(--text)] hover:text-[var(--accent)] transition-colors">À propos</a>
-            <a href="experience.html" class="font-display text-4xl text-[var(--accent)]">Expériences</a>
             <a href="formations.html" class="font-display text-4xl text-[var(--text)] hover:text-[var(--accent)] transition-colors">Formations</a>
+            <a href="experience.html" class="font-display text-4xl text-[var(--accent)]">Expériences</a>
             <a href="contact.html" class="font-display text-4xl text-[var(--text)] hover:text-[var(--accent)] transition-colors">Contact</a>
             <button id="menu-close" class="absolute top-6 right-6 text-[var(--text)]">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -54,24 +54,42 @@
         </div>
 
         <!-- Hero Section -->
-        <section class="min-h-[50vh] flex items-end relative pt-32 pb-20 px-6 lg:px-12">
+        <section class="min-h-[40vh] sm:min-h-[50vh] flex items-end relative pt-24 sm:pt-32 pb-12 sm:pb-20 section-px lg:px-12">
             <div class="max-w-7xl mx-auto w-full">
                 <div class="reveal">
-                    <span class="text-[var(--accent)] text-sm uppercase tracking-[0.3em] font-medium block mb-6">Parcours professionnel</span>
-                    <h1 class="font-display font-bold text-4xl md:text-6xl lg:text-7xl leading-[0.9] mb-8">
+                    <span class="text-[var(--accent)] text-xs sm:text-sm uppercase tracking-[0.2em] sm:tracking-[0.3em] font-medium block mb-4 sm:mb-6">Parcours professionnel</span>
+                    <h1 class="font-display font-bold hero-title mb-6 sm:mb-8">
                         EXPÉRIENCES<br>
                         <span class="text-[var(--accent)]">PROFESSIONNELLES</span>
                     </h1>
-                    <p class="text-[var(--text-muted)] text-xl max-w-2xl leading-relaxed">
+                    <p class="text-[var(--text-muted)] text-base sm:text-lg md:text-xl max-w-2xl leading-relaxed">
                         Un parcours professionnel entre deux continents, de la Guinée à la France, avec des expériences en comptabilité, contrôle de gestion, développement commercial et enseignement.
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- Accordion Section -->
-        <section class="py-20 px-6 lg:px-12">
-            <div class="max-w-4xl mx-auto">
+        <!-- Parcours du CV -->
+        <section class="py-6 sm:py-8 section-px lg:px-12 border-y border-[var(--border)] bg-[var(--bg-warm)]">
+            <div class="max-w-7xl mx-auto reveal">
+                <p class="text-sm text-[var(--text-muted)] uppercase tracking-wider mb-4">Parcours du portfolio</p>
+                <div class="cv-flow">
+                    <a href="about.html" class="cv-flow-step"><span class="step-num">1</span> À propos</a>
+                    <a href="formations.html" class="cv-flow-step"><span class="step-num">2</span> Formations</a>
+                    <a href="experience.html" class="cv-flow-step active"><span class="step-num">3</span> Expériences</a>
+                    <a href="formations.html#travaux" class="cv-flow-step"><span class="step-num">4</span> Travaux</a>
+                    <a href="experience.html#projet" class="cv-flow-step"><span class="step-num">5</span> Projet pro</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expériences professionnelles -->
+        <section class="py-12 sm:py-16 md:py-20 section-px lg:px-12">
+            <div class="max-w-4xl mx-auto w-full min-w-0">
+                <div class="reveal mb-8 sm:mb-10">
+                    <h2 class="font-display text-xl sm:text-2xl md:text-3xl font-bold">Expériences professionnelles</h2>
+                    <p class="text-[var(--text-muted)] mt-2">Stages, emplois et activités entrepreneuriales.</p>
+                </div>
                 
                 <!-- Ravensera -->
                 <div class="accordion-item reveal">
@@ -90,6 +108,7 @@
                     </div>
                     <div class="accordion-content">
                         <div class="accordion-inner pro">
+                            <p class="text-sm text-[var(--text-muted)] mb-4 leading-relaxed">Entreprise entrepreneuriale autour de deux marques complémentaires : Artémus (brasserie artisanale) et 24 Terre (torréfaction). Une immersion concrète dans l'entrepreneuriat qui nourrit mon ambition de créer mon propre cabinet de conseil.</p>
                             <ul class="space-y-3 text-sm text-[var(--text-muted)]">
                                 <li class="flex items-start gap-2">
                                     <span class="text-[var(--accent)] mt-1">—</span>
@@ -164,6 +183,7 @@
                     </div>
                     <div class="accordion-content">
                         <div class="accordion-inner pro">
+                            <p class="text-sm text-[var(--text-muted)] mb-4 leading-relaxed">Leader des télécommunications en Guinée (65,9 % des parts de marché mobile, 13,5 millions d'abonnés). Une structure multinationale exigeante qui m'a appris la rigueur des grands groupes.</p>
                             <ul class="space-y-3 text-sm text-[var(--text-muted)]">
                                 <li class="flex items-start gap-2">
                                     <span class="text-[var(--accent)] mt-1">—</span>
@@ -235,10 +255,10 @@
                         <div class="accordion-header-content">
                             <div class="flex flex-wrap items-center gap-3 mb-2">
                                 <span class="badge badge-pro">Stage</span>
-                                <span class="text-sm text-[var(--text-muted)]">Oct. – Nov. 2024</span>
+                                <span class="text-sm text-[var(--text-muted)]">6 semaines · 2024</span>
                             </div>
                             <h3 class="font-display text-xl font-bold">Assistant Comptable & Gestion de Stock</h3>
-                            <p class="text-[var(--accent)] font-medium">Saticom SAS — Conakry</p>
+                            <p class="text-[var(--accent)] font-medium">Saticom — Conakry, Guinée</p>
                         </div>
                         <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -246,10 +266,11 @@
                     </div>
                     <div class="accordion-content">
                         <div class="accordion-inner pro">
+                            <p class="text-sm text-[var(--text-muted)] mb-4 leading-relaxed">Start-up guinéenne spécialisée dans les équipements informatiques. Voir une entreprise construite de zéro par un jeune entrepreneur m'a profondément inspiré.</p>
                             <ul class="space-y-3 text-sm text-[var(--text-muted)]">
                                 <li class="flex items-start gap-2">
                                     <span class="text-[var(--accent)] mt-1">—</span>
-                                    <span>Traitement des factures clients et fournisseurs</span>
+                                    <span>Traitement des factures clients et fournisseurs, suivi des paiements</span>
                                 </li>
                                 <li class="flex items-start gap-2">
                                     <span class="text-[var(--accent)] mt-1">—</span>
@@ -264,7 +285,53 @@
                     </div>
                 </div>
                 
-                <!-- Baptist Learning Center -->
+                <!-- Boulangerie -->
+                <div class="accordion-item reveal">
+                    <div class="accordion-header pro">
+                        <div class="accordion-header-content">
+                            <div class="flex flex-wrap items-center gap-3 mb-2">
+                                <span class="badge badge-pro">Emploi</span>
+                                <span class="text-sm text-[var(--text-muted)]">Nov. 2023 – Avr. 2024</span>
+                            </div>
+                            <h3 class="font-display text-xl font-bold">Caissier & Gestionnaire</h3>
+                            <p class="text-[var(--accent)] font-medium">Boulangerie — Conakry, Guinée</p>
+                        </div>
+                        <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-inner pro">
+                            <p class="text-sm text-[var(--text-muted)] mb-4 leading-relaxed">Une expérience terrain en dehors de mon domaine d'études, mais essentielle. Elle m'a appris à gérer des responsabilités concrètes dans un environnement à rythme soutenu.</p>
+                            <ul class="space-y-3 text-sm text-[var(--text-muted)]">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-[var(--accent)] mt-1">—</span>
+                                    <span>Gestion de caisse — transactions journalières et suivi des encaissements</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-[var(--accent)] mt-1">—</span>
+                                    <span>Suivi des stocks et passation des commandes fournisseurs</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-[var(--accent)] mt-1">—</span>
+                                    <span>Coordination de l'équipe de livraison</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Autres expériences pro & associatives -->
+        <section class="py-12 sm:py-16 md:py-20 section-px lg:px-12 bg-[var(--bg-warm)]">
+            <div class="max-w-4xl mx-auto w-full min-w-0">
+                <div class="reveal mb-8 sm:mb-10">
+                    <h2 class="font-display text-xl sm:text-2xl md:text-3xl font-bold">Autres expériences pro & associatives</h2>
+                    <p class="text-[var(--text-muted)] mt-2">Engagements culturels, associatifs et pédagogiques.</p>
+                </div>
+
+                <!-- Mission Baptiste -->
                 <div class="accordion-item reveal">
                     <div class="accordion-header pro">
                         <div class="accordion-header-content">
@@ -281,14 +348,15 @@
                     </div>
                     <div class="accordion-content">
                         <div class="accordion-inner pro">
+                            <p class="text-sm text-[var(--text-muted)] mb-4 leading-relaxed">ONG américaine implantée en Guinée. Une mission rémunérée dans un cadre interculturel exigeant, auprès d'apprenants américains.</p>
                             <ul class="space-y-3 text-sm text-[var(--text-muted)]">
                                 <li class="flex items-start gap-2">
                                     <span class="text-[var(--accent)] mt-1">—</span>
-                                    <span>Cours de FLE (Français Langue Étrangère) adaptés aux apprenants</span>
+                                    <span>Cours de FLE adaptés au niveau et aux besoins de chaque apprenant</span>
                                 </li>
                                 <li class="flex items-start gap-2">
                                     <span class="text-[var(--accent)] mt-1">—</span>
-                                    <span>Accompagnement culturel — ateliers culinaires, jeux de société</span>
+                                    <span>Accompagnement culturel — ateliers culinaires, jeux de société, immersion</span>
                                 </li>
                                 <li class="flex items-start gap-2">
                                     <span class="text-[var(--accent)] mt-1">—</span>
@@ -298,17 +366,17 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- Allah Wally -->
+
+                <!-- American Corner -->
                 <div class="accordion-item reveal">
                     <div class="accordion-header pro">
                         <div class="accordion-header-content">
                             <div class="flex flex-wrap items-center gap-3 mb-2">
-                                <span class="badge badge-pro">Emploi</span>
-                                <span class="text-sm text-[var(--text-muted)]">Nov. 2023 – Mars 2024</span>
+                                <span class="badge badge-pro">Bénévolat</span>
+                                <span class="text-sm text-[var(--text-muted)]">2022 – 2023</span>
                             </div>
-                            <h3 class="font-display text-xl font-bold">Caissier & Gestionnaire</h3>
-                            <p class="text-[var(--accent)] font-medium">Allah Wally Boulangerie — Kamsar</p>
+                            <h3 class="font-display text-xl font-bold">Bénévole</h3>
+                            <p class="text-[var(--accent)] font-medium">American Corner de Conakry — Guinée</p>
                         </div>
                         <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -316,14 +384,87 @@
                     </div>
                     <div class="accordion-content">
                         <div class="accordion-inner pro">
+                            <p class="text-sm text-[var(--text-muted)] mb-4 leading-relaxed">Espace culturel rattaché à l'Ambassade des États-Unis. Après une année de formation en anglais, j'ai rejoint l'équipe en tant que bénévole.</p>
                             <ul class="space-y-3 text-sm text-[var(--text-muted)]">
                                 <li class="flex items-start gap-2">
                                     <span class="text-[var(--accent)] mt-1">—</span>
-                                    <span>Gestion de caisse et transactions</span>
+                                    <span>Assistance aux enseignants lors des séances de cours</span>
                                 </li>
                                 <li class="flex items-start gap-2">
                                     <span class="text-[var(--accent)] mt-1">—</span>
-                                    <span>Accueil et fidélisation clientèle</span>
+                                    <span>Animation d'ateliers de conversation et d'activités culturelles</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-[var(--accent)] mt-1">—</span>
+                                    <span>Accompagnement des apprenants dans la pratique quotidienne de l'anglais</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Leaders Écologiques -->
+                <div class="accordion-item reveal">
+                    <div class="accordion-header pro">
+                        <div class="accordion-header-content">
+                            <div class="flex flex-wrap items-center gap-3 mb-2">
+                                <span class="badge badge-pro">Association</span>
+                                <span class="text-sm text-[var(--text-muted)]">2024 – 2025</span>
+                            </div>
+                            <h3 class="font-display text-xl font-bold">Membre Actif — Les Leaders Écologiques de Demain</h3>
+                            <p class="text-[var(--accent)] font-medium">Association étudiante — Guinée</p>
+                        </div>
+                        <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-inner pro">
+                            <p class="text-sm text-[var(--text-muted)] mb-4 leading-relaxed">Organisation engagée pour la protection de l'environnement, avec des actions reconnues et soutenues par l'ONU.</p>
+                            <ul class="space-y-3 text-sm text-[var(--text-muted)]">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-[var(--accent)] mt-1">—</span>
+                                    <span>Campagnes de sensibilisation aux enjeux écologiques</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-[var(--accent)] mt-1">—</span>
+                                    <span>Organisation de journées de nettoyage dans différents quartiers de Conakry</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-[var(--accent)] mt-1">—</span>
+                                    <span>Participation à des événements environnementaux soutenus par l'ONU</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Club 4 Heures -->
+                <div class="accordion-item reveal">
+                    <div class="accordion-header pro">
+                        <div class="accordion-header-content">
+                            <div class="flex flex-wrap items-center gap-3 mb-2">
+                                <span class="badge badge-pro">Club</span>
+                                <span class="text-sm text-[var(--text-muted)]">2023 – 2025</span>
+                            </div>
+                            <h3 class="font-display text-xl font-bold">Membre Actif — Club « 4 Heures avec l'Humain »</h3>
+                            <p class="text-[var(--accent)] font-medium">Club de lecture & débat — Guinée</p>
+                        </div>
+                        <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-inner pro">
+                            <p class="text-sm text-[var(--text-muted)] mb-4 leading-relaxed">Club intellectuel réunissant des jeunes autour de la lecture en plein air et du débat d'idées sur des thématiques sociales, politiques, psychologiques et économiques.</p>
+                            <ul class="space-y-3 text-sm text-[var(--text-muted)]">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-[var(--accent)] mt-1">—</span>
+                                    <span>Séances de lecture autour de Frantz Fanon, Hannah Arendt, Sigmund Freud</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-[var(--accent)] mt-1">—</span>
+                                    <span>Présentation et confrontation d'analyses entre membres</span>
                                 </li>
                             </ul>
                         </div>
@@ -332,16 +473,61 @@
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section class="py-20 px-6 lg:px-12">
-            <div class="max-w-7xl mx-auto">
-                <div class="bg-gradient-to-r from-[var(--bg-warm)] to-[var(--bg-dark)] border border-[var(--border)] rounded-3xl p-12 md:p-16 flex flex-col md:flex-row items-center justify-between gap-8">
-                    <div>
-                        <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Voir mes formations</h2>
-                        <p class="text-[var(--text-muted)] max-w-md">Découvrez mon parcours académique et mes diplômes.</p>
+        <!-- Projet professionnel -->
+        <section id="projet" class="py-12 sm:py-16 md:py-20 section-px lg:px-12">
+            <div class="max-w-7xl mx-auto w-full min-w-0">
+                <div class="reveal mb-8 sm:mb-12">
+                    <span class="text-[var(--accent)] text-xs sm:text-sm uppercase tracking-[0.2em] sm:tracking-[0.3em] font-medium block mb-4 sm:mb-6">Conclusion</span>
+                    <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Projet professionnel</h2>
+                    <p class="text-[var(--text-muted)] max-w-2xl leading-relaxed">Mon ambition est claire et construite sur le long terme — de Conakry à Paris-Saclay, chaque expérience me rapproche de cet objectif.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12 reveal">
+                    <div class="info-card">
+                        <div class="text-sm text-[var(--accent)] uppercase tracking-wider mb-2">Court terme</div>
+                        <p class="text-[var(--text-muted)] text-sm leading-relaxed">Intégrer un Master en Management Stratégique ou en Contrôle de Gestion, pour approfondir ma capacité à piloter la performance d'une organisation.</p>
                     </div>
-                    <a href="formations.html" class="btn-primary text-lg px-10 py-4">
-                        Voir formations
+                    <div class="info-card">
+                        <div class="text-sm text-[var(--accent)] uppercase tracking-wider mb-2">Moyen terme</div>
+                        <p class="text-[var(--text-muted)] text-sm leading-relaxed">Exercer en tant que consultant en gestion — combiner analyse, conseil et impact concret auprès d'entreprises variées.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="text-sm text-[var(--accent)] uppercase tracking-wider mb-2">Long terme</div>
+                        <p class="text-[var(--text-muted)] text-sm leading-relaxed">Créer mon propre cabinet d'audit et de conseil en Guinée — contribuer au développement économique de mon pays d'origine.</p>
+                    </div>
+                </div>
+
+                <div class="reveal">
+                    <div class="bg-gradient-to-br from-[var(--bg-warm)] to-[var(--bg-dark)] border border-[var(--border)] rounded-2xl sm:rounded-3xl p-6 sm:p-10 md:p-16 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-64 h-64 bg-[var(--accent)] opacity-10 rounded-full blur-3xl"></div>
+                        <div class="relative z-10">
+                            <h3 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">DIYA Vision</h3>
+                            <p class="text-[var(--text-muted)] text-sm sm:text-base md:text-lg leading-relaxed mb-4 max-w-3xl">
+                                <span class="text-[var(--accent)] font-semibold">DIYA</span> signifie lumière en Malinke — le nom de mon projet de cabinet de conseil, d'audit et de contrôle de gestion en Guinée.
+                            </p>
+                            <p class="text-[var(--text-muted)] text-sm sm:text-base md:text-lg leading-relaxed mb-6 sm:mb-8 max-w-3xl">
+                                Trop d'entreprises africaines, notamment les PME et startups, prennent des décisions sans outils de pilotage fiables. DIYA Vision a vocation à combler ce manque — une expertise rigoureuse, adaptée aux réalités locales et accessible aux petites structures.
+                            </p>
+                            <div class="bg-[var(--accent)]/10 border border-[var(--accent)] rounded-2xl p-4 sm:p-6 block sm:inline-block max-w-full">
+                                <p class="font-display text-base sm:text-lg md:text-xl font-semibold text-[var(--accent)]">« Éclairer la décision, sécuriser la performance. »</p>
+                            </div>
+                            <p class="text-[var(--text-muted)] text-sm mt-8 max-w-2xl">Ce projet est encore en construction — chaque formation, chaque compétence acquise est une brique de plus. La première étape est le Master. Le cabinet, c'est l'horizon.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-12 sm:py-16 md:py-20 section-px lg:px-12 bg-[var(--bg-warm)]">
+            <div class="max-w-7xl mx-auto w-full min-w-0">
+                <div class="bg-gradient-to-r from-[var(--bg-dark)] to-[var(--bg-warm)] border border-[var(--border)] rounded-2xl sm:rounded-3xl p-6 sm:p-10 md:p-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 sm:gap-8">
+                    <div class="min-w-0">
+                        <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Intéressé par mon profil ?</h2>
+                        <p class="text-[var(--text-muted)] text-sm sm:text-base max-w-md">Disponible pour un stage en comptabilité — minimum 2 mois, immédiatement.</p>
+                    </div>
+                    <a href="contact.html" class="btn-primary text-sm sm:text-base md:text-lg px-6 sm:px-10 py-3 sm:py-4 w-full sm:w-auto">
+                        Me contacter
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                         </svg>
@@ -351,20 +537,20 @@
         </section>
 
         <!-- Footer -->
-        <footer class="py-12 px-6 lg:px-12 border-t border-[var(--border)]">
-            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-                <div class="font-display text-2xl font-bold">
+        <footer class="py-10 sm:py-12 section-px lg:px-12 border-t border-[var(--border)]">
+            <div class="max-w-7xl mx-auto flex flex-col items-center justify-center gap-4 sm:gap-6 text-center">
+                <div class="font-display text-xl sm:text-2xl font-bold">
                     OB<span class="text-[var(--accent)]">.</span>
                 </div>
-                <div class="text-[var(--text-muted)] text-sm">
+                <div class="text-[var(--text-muted)] text-xs sm:text-sm">
                     © 2026 Oury Bah — Étudiant Paris-Saclay
                 </div>
-                <div class="flex items-center gap-6">
-                    <a href="index.html" class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors text-sm">Accueil</a>
-                    <a href="about.html" class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors text-sm">À propos</a>
-                    <a href="experience.html" class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors text-sm">Expériences</a>
-                    <a href="formations.html" class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors text-sm">Formations</a>
-                    <a href="contact.html" class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors text-sm">Contact</a>
+                <div class="site-footer-nav flex items-center">
+                    <a href="index.html" class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors text-xs sm:text-sm">Accueil</a>
+                    <a href="about.html" class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors text-xs sm:text-sm">À propos</a>
+                    <a href="formations.html" class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors text-xs sm:text-sm">Formations</a>
+                    <a href="experience.html" class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors text-xs sm:text-sm">Expériences</a>
+                    <a href="contact.html" class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors text-xs sm:text-sm">Contact</a>
                 </div>
             </div>
         </footer>
