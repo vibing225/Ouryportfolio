@@ -62,22 +62,8 @@
                         <span class="text-[var(--accent)]">FORMATIONS</span>
                     </h1>
                     <p class="text-[var(--text-muted)] text-xl max-w-2xl leading-relaxed">
-                        Un parcours académique entre la Guinée et la France, marqué par une formation solide en comptabilité, gestion et développement entrepreneurial.
+                        Un parcours académique entre la Guinée et la France, marqué par une formation solide en gestion d'entreprise et développement entrepreneurial.
                     </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Parcours du CV -->
-        <section class="py-8 px-6 lg:px-12 border-y border-[var(--border)] bg-[var(--bg-warm)]">
-            <div class="max-w-7xl mx-auto reveal">
-                <p class="text-sm text-[var(--text-muted)] uppercase tracking-wider mb-4">Parcours du portfolio</p>
-                <div class="cv-flow">
-                    <a href="about.html" class="cv-flow-step"><span class="step-num">1</span> À propos</a>
-                    <a href="formations.html" class="cv-flow-step active"><span class="step-num">2</span> Formations</a>
-                    <a href="experience.html" class="cv-flow-step"><span class="step-num">3</span> Expériences</a>
-                    <a href="formations.html#travaux" class="cv-flow-step"><span class="step-num">4</span> Travaux</a>
-                    <a href="experience.html#projet" class="cv-flow-step"><span class="step-num">5</span> Projet pro</a>
                 </div>
             </div>
         </section>
@@ -86,212 +72,223 @@
         <section class="py-20 px-6 lg:px-12">
             <div class="max-w-7xl mx-auto w-full min-w-0">
                 
-                <!-- Desktop Layout: Images + Timeline + Accordion -->
-                <div class="hidden lg:grid lg:grid-cols-[300px_1px_1fr] gap-8">
-                    <!-- Images Column -->
-                    <div class="space-y-8">
-                        <img src="img/IUTsceaux.jpg" alt="IUT de Sceaux" class="w-full h-48 object-cover rounded-2xl shadow-lg">
-                        <img src="img/UniversiteGeneralLassanaConte.jpg" alt="Université Général Lansana Conté" class="w-full h-48 object-cover rounded-2xl shadow-lg">
-                        <img src="img/class(1).webp" alt="Formation Anglais" class="w-full h-48 object-cover rounded-2xl shadow-lg">
-                        <img src="img/1d.webp" alt="The Bench" class="w-full h-48 object-cover rounded-2xl shadow-lg">
-                        <img src="img/class(1).webp" alt="Baccalauréat" class="w-full h-48 object-cover rounded-2xl shadow-lg">
-                    </div>
-                    
-                    <!-- Timeline Column -->
-                    <div class="relative">
-                        <div class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-[var(--border)] transform -translate-x-1/2"></div>
-                        <div class="absolute left-1/2 top-0 bottom-0 space-y-48 transform -translate-x-1/2">
-                            <div class="w-4 h-4 rounded-full bg-[var(--accent)] border-4 border-[var(--bg-dark)]"></div>
-                            <div class="w-4 h-4 rounded-full bg-[var(--accent)] border-4 border-[var(--bg-dark)]"></div>
-                            <div class="w-4 h-4 rounded-full bg-[var(--accent)] border-4 border-[var(--bg-dark)]"></div>
-                            <div class="w-4 h-4 rounded-full bg-[var(--accent)] border-4 border-[var(--bg-dark)]"></div>
-                            <div class="w-4 h-4 rounded-full bg-[var(--accent)] border-4 border-[var(--bg-dark)]"></div>
-                        </div>
-                    </div>
-                    
-                    <!-- Accordion Column -->
-                    <div class="space-y-6">
+                <!-- Desktop Layout: Each row has Image + Timeline + Accordion -->
+                <div class="hidden lg:block lg:space-y-8">
                 
                 <!-- BUT 3 GEA -->
-                <div class="accordion-item reveal">
-                    <div class="accordion-header edu">
-                        <div class="accordion-header-content">
-                            <div class="flex flex-wrap items-center gap-3 mb-2">
-                                <span class="badge badge-edu">Formation</span>
-                                <span class="text-sm text-[var(--text-muted)]">2025 – 2026</span>
-                            </div>
-                            <h3 class="font-display text-xl font-bold">BUT 3 Gestion des Entreprises et des Administrations</h3>
-                            <p class="text-[var(--accent)] font-medium">IUT de Sceaux — Université Paris-Saclay</p>
-                        </div>
-                        <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
+                <div class="grid grid-cols-[300px_1px_1fr] gap-8 items-start">
+                    <img src="img/IUTsceaux.jpg" alt="IUT de Sceaux" class="w-full h-48 object-cover rounded-2xl shadow-lg">
+                    <div class="relative min-h-[192px]">
+                        <div class="absolute left-1/2 top-6 w-0.5 h-full bg-[var(--border)] transform -translate-x-1/2"></div>
+                        <div class="absolute left-1/2 top-6 w-4 h-4 rounded-full bg-[var(--accent)] border-4 border-[var(--bg-dark)] transform -translate-x-1/2"></div>
                     </div>
-                    <div class="accordion-content">
-                        <div class="accordion-inner edu">
-                            <p class="text-sm text-[var(--text-muted)] mb-4 leading-relaxed">Après ma licence, j'ai poursuivi mes études à l'étranger — une formation exigeante qui me forme à la création de valeur, au management d'activité et au développement de la chaîne de valeur dans une organisation.</p>
-                            <ul class="space-y-3 text-sm text-[var(--text-muted)]">
-                                <li class="flex items-start gap-2">
-                                    <span class="text-[var(--accent)] mt-1">—</span>
-                                    <span>Analyser les processus de l'organisation dans son environnement</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-[var(--accent)] mt-1">—</span>
-                                    <span>Aider à la prise de décision — interprétation des données qualitatives et quantitatives</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-[var(--accent)] mt-1">—</span>
-                                    <span>Concevoir la stratégie de création de valeur</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-[var(--accent)] mt-1">—</span>
-                                    <span>Assurer la gestion et le développement de la chaîne de valeur</span>
-                                </li>
-                            </ul>
+                    <div class="accordion-item reveal">
+                        <div class="accordion-header edu">
+                            <div class="accordion-header-content">
+                                <div class="flex flex-wrap items-center gap-3 mb-2">
+                                    <span class="badge badge-edu">Formation</span>
+                                    <span class="text-sm text-[var(--text-muted)]">2025 – 2026</span>
+                                </div>
+                                <h3 class="font-display text-xl font-bold">BUT 3 Gestion des Entreprises et des Administrations</h3>
+                                <p class="text-[var(--accent)] font-medium">IUT de Sceaux — Université Paris-Saclay</p>
+                            </div>
+                            <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-inner edu">
+                                <p class="text-sm text-[var(--text-muted)] mb-4 leading-relaxed">Après ma licence, j'ai poursuivi mes études à l'étranger — une formation exigeante qui me forme à la création de valeur, au management d'activité et au développement de la chaîne de valeur dans une organisation.</p>
+                                <ul class="space-y-3 text-sm text-[var(--text-muted)]">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-[var(--accent)] mt-1">—</span>
+                                        <span>Analyser les processus de l'organisation dans son environnement</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-[var(--accent)] mt-1">—</span>
+                                        <span>Aider à la prise de décision — interprétation des données qualitatives et quantitatives</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-[var(--accent)] mt-1">—</span>
+                                        <span>Concevoir la stratégie de création de valeur</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-[var(--accent)] mt-1">—</span>
+                                        <span>Assurer la gestion et le développement de la chaîne de valeur</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Licence 3 -->
-                <div class="accordion-item reveal">
-                    <div class="accordion-header edu">
-                        <div class="accordion-header-content">
-                            <div class="flex flex-wrap items-center gap-3 mb-2">
-                                <span class="badge badge-edu">Formation</span>
-                                <span class="text-sm text-[var(--text-muted)]">2021 – 2023</span>
-                            </div>
-                            <h3 class="font-display text-xl font-bold">Licence en Comptabilité de Gestion</h3>
-                            <p class="text-[var(--accent)] font-medium">Université Général Lansana Conté de Sonfonia — Conakry</p>
-                        </div>
-                        <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
+                <div class="grid grid-cols-[300px_1px_1fr] gap-8 items-start">
+                    <img src="img/UniversiteGeneralLassanaConte.jpg" alt="Université Général Lansana Conté" class="w-full h-48 object-cover rounded-2xl shadow-lg">
+                    <div class="relative min-h-[192px]">
+                        <div class="absolute left-1/2 top-6 w-0.5 h-full bg-[var(--border)] transform -translate-x-1/2"></div>
+                        <div class="absolute left-1/2 top-6 w-4 h-4 rounded-full bg-[var(--accent)] border-4 border-[var(--bg-dark)] transform -translate-x-1/2"></div>
                     </div>
-                    <div class="accordion-content">
-                        <div class="accordion-inner edu">
-                            <p class="text-sm text-[var(--text-muted)] mb-4 leading-relaxed">Le socle fondateur de mon parcours en gestion — une vision structurée et rigoureuse du fonctionnement d'une entreprise.</p>
-                            <ul class="space-y-3 text-sm text-[var(--text-muted)]">
-                                <li class="flex items-start gap-2">
-                                    <span class="text-[var(--accent)] mt-1">—</span>
-                                    <span>Comptabilité générale — écritures comptables, états financiers, clôtures</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-[var(--accent)] mt-1">—</span>
-                                    <span>Finance — analyse financière, lecture et interprétation des bilans</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-[var(--accent)] mt-1">—</span>
-                                    <span>Contrôle de gestion — suivi budgétaire, analyse des écarts</span>
-                                </li>
-                            </ul>
+                    <div class="accordion-item reveal">
+                        <div class="accordion-header edu">
+                            <div class="accordion-header-content">
+                                <div class="flex flex-wrap items-center gap-3 mb-2">
+                                    <span class="badge badge-edu">Formation</span>
+                                    <span class="text-sm text-[var(--text-muted)]">2021 – 2023</span>
+                                </div>
+                                <h3 class="font-display text-xl font-bold">Licence en Comptabilité de Gestion</h3>
+                                <p class="text-[var(--accent)] font-medium">Université Général Lansana Conté de Sonfonia — Conakry</p>
+                            </div>
+                            <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-inner edu">
+                                <p class="text-sm text-[var(--text-muted)] mb-4 leading-relaxed">Le socle fondateur de mon parcours en gestion — une vision structurée et rigoureuse du fonctionnement d'une entreprise.</p>
+                                <ul class="space-y-3 text-sm text-[var(--text-muted)]">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-[var(--accent)] mt-1">—</span>
+                                        <span>Comptabilité générale — écritures comptables, états financiers, clôtures</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-[var(--accent)] mt-1">—</span>
+                                        <span>Finance — analyse financière, lecture et interprétation des bilans</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-[var(--accent)] mt-1">—</span>
+                                        <span>Contrôle de gestion — suivi budgétaire, analyse des écarts</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Formation Anglais -->
-                <div class="accordion-item reveal">
-                    <div class="accordion-header edu">
-                        <div class="accordion-header-content">
-                            <div class="flex flex-wrap items-center gap-3 mb-2">
-                                <span class="badge badge-edu">Formation</span>
-                                <span class="text-sm text-[var(--text-muted)]">2023</span>
-                            </div>
-                            <h3 class="font-display text-xl font-bold">Formation en Anglais</h3>
-                            <p class="text-[var(--accent)] font-medium">American Corner — Bibliothèque Américaine, Conakry</p>
-                        </div>
-                        <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
+                <div class="grid grid-cols-[300px_1px_1fr] gap-8 items-start">
+                    <img src="img/Americancorner.jpg" alt="Formation Anglais" class="w-full h-48 object-cover rounded-2xl shadow-lg">
+                    <div class="relative min-h-[192px]">
+                        <div class="absolute left-1/2 top-6 w-0.5 h-full bg-[var(--border)] transform -translate-x-1/2"></div>
+                        <div class="absolute left-1/2 top-6 w-4 h-4 rounded-full bg-[var(--accent)] border-4 border-[var(--bg-dark)] transform -translate-x-1/2"></div>
                     </div>
-                    <div class="accordion-content">
-                        <div class="accordion-inner edu">
-                            <p class="text-sm text-[var(--text-muted)] mb-4 leading-relaxed">Une année de formation combinant cours structurés et ateliers animés par des natifs américains. À l'issue, j'ai rejoint l'équipe en tant que bénévole pour aider les étudiants dans leur apprentissage.</p>
-                            <ul class="space-y-3 text-sm text-[var(--text-muted)]">
-                                <li class="flex items-start gap-2">
-                                    <span class="text-[var(--accent)] mt-1">—</span>
-                                    <span>Cours structurés et ateliers de conversation avec natifs américains</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-[var(--accent)] mt-1">—</span>
-                                    <span>Amélioration du niveau oral et aisance à l'écrit</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-[var(--accent)] mt-1">—</span>
-                                    <span>Bénévolat ultérieur — aide aux étudiants dans leur apprentissage</span>
-                                </li>
-                            </ul>
+                    <div class="accordion-item reveal">
+                        <div class="accordion-header edu">
+                            <div class="accordion-header-content">
+                                <div class="flex flex-wrap items-center gap-3 mb-2">
+                                    <span class="badge badge-edu">Formation</span>
+                                    <span class="text-sm text-[var(--text-muted)]">2023</span>
+                                </div>
+                                <h3 class="font-display text-xl font-bold">Formation en Anglais</h3>
+                                <p class="text-[var(--accent)] font-medium">American Corner — Bibliothèque Américaine, Conakry</p>
+                            </div>
+                            <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-inner edu">
+                                <p class="text-sm text-[var(--text-muted)] mb-4 leading-relaxed">Une année de formation combinant cours structurés et ateliers animés par des natifs américains. À l'issue, j'ai rejoint l'équipe en tant que bénévole pour aider les étudiants dans leur apprentissage.</p>
+                                <ul class="space-y-3 text-sm text-[var(--text-muted)]">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-[var(--accent)] mt-1">—</span>
+                                        <span>Cours structurés et ateliers de conversation avec natifs américains</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-[var(--accent)] mt-1">—</span>
+                                        <span>Amélioration du niveau oral et aisance à l'écrit</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-[var(--accent)] mt-1">—</span>
+                                        <span>Bénévolat ultérieur — aide aux étudiants dans leur apprentissage</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
                 <!-- The Bench -->
-                <div class="accordion-item reveal">
-                    <div class="accordion-header edu">
-                        <div class="accordion-header-content">
-                            <div class="flex flex-wrap items-center gap-3 mb-2">
-                                <span class="badge badge-edu">Formation</span>
-                                <span class="text-sm text-[var(--text-muted)]">1 mois</span>
-                            </div>
-                            <h3 class="font-display text-xl font-bold">The Bench — Pré-Incubation Entrepreneuriale</h3>
-                            <p class="text-[var(--accent)] font-medium">En ligne</p>
-                        </div>
-                        <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
+                <div class="grid grid-cols-[300px_1px_1fr] gap-8 items-start">
+                    <img src="img/1d.webp" alt="The Bench" class="w-full h-48 object-cover rounded-2xl shadow-lg">
+                    <div class="relative min-h-[192px]">
+                        <div class="absolute left-1/2 top-6 w-0.5 h-full bg-[var(--border)] transform -translate-x-1/2"></div>
+                        <div class="absolute left-1/2 top-6 w-4 h-4 rounded-full bg-[var(--accent)] border-4 border-[var(--bg-dark)] transform -translate-x-1/2"></div>
                     </div>
-                    <div class="accordion-content">
-                        <div class="accordion-inner edu">
-                            <p class="text-sm text-[var(--text-muted)] mb-4 leading-relaxed">Formation de pré-incubation qui a nourri directement mon projet entrepreneurial DIYA Vision — les outils concrets pour passer de l'idée à une vision structurée.</p>
-                            <ul class="space-y-3 text-sm text-[var(--text-muted)]">
-                                <li class="flex items-start gap-2">
-                                    <span class="text-[var(--accent)] mt-1">—</span>
-                                    <span>Étude de marché et analyse de faisabilité</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-[var(--accent)] mt-1">—</span>
-                                    <span>Construction d'un modèle économique</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-[var(--accent)] mt-1">—</span>
-                                    <span>Techniques de pitch et structuration de projet</span>
-                                </li>
-                            </ul>
+                    <div class="accordion-item reveal">
+                        <div class="accordion-header edu">
+                            <div class="accordion-header-content">
+                                <div class="flex flex-wrap items-center gap-3 mb-2">
+                                    <span class="badge badge-edu">Formation</span>
+                                    <span class="text-sm text-[var(--text-muted)]">1 mois</span>
+                                </div>
+                                <h3 class="font-display text-xl font-bold">The Bench — Pré-Incubation Entrepreneuriale</h3>
+                                <p class="text-[var(--accent)] font-medium">En ligne</p>
+                            </div>
+                            <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-inner edu">
+                                <p class="text-sm text-[var(--text-muted)] mb-4 leading-relaxed">Formation de pré-incubation qui a nourri directement mon projet entrepreneurial DIYA Vision — les outils concrets pour passer de l'idée à une vision structurée.</p>
+                                <ul class="space-y-3 text-sm text-[var(--text-muted)]">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-[var(--accent)] mt-1">—</span>
+                                        <span>Étude de marché et analyse de faisabilité</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-[var(--accent)] mt-1">—</span>
+                                        <span>Construction d'un modèle économique</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-[var(--accent)] mt-1">—</span>
+                                        <span>Techniques de pitch et structuration de projet</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Baccalauréat -->
-                <div class="accordion-item reveal">
-                    <div class="accordion-header edu">
-                        <div class="accordion-header-content">
-                            <div class="flex flex-wrap items-center gap-3 mb-2">
-                                <span class="badge badge-edu">Formation</span>
-                                <span class="text-sm text-[var(--text-muted)]">2020</span>
-                            </div>
-                            <h3 class="font-display text-xl font-bold">Baccalauréat Série Scientifique — Sciences Mathématiques</h3>
-                            <p class="text-[var(--accent)] font-medium">Lycée Albert Bauer — Conakry, Guinée</p>
-                        </div>
-                        <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
+                <div class="grid grid-cols-[300px_1px_1fr] gap-8 items-start">
+                    <img src="img/baccalaireat.webp" alt="Baccalauréat" class="w-full h-48 object-cover rounded-2xl shadow-lg">
+                    <div class="relative min-h-[192px]">
+                        <div class="absolute left-1/2 top-6 w-0.5 h-full bg-[var(--border)] transform -translate-x-1/2"></div>
+                        <div class="absolute left-1/2 top-6 w-4 h-4 rounded-full bg-[var(--accent)] border-4 border-[var(--bg-dark)] transform -translate-x-1/2"></div>
                     </div>
-                    <div class="accordion-content">
-                        <div class="accordion-inner edu">
-                            <p class="text-sm text-[var(--text-muted)] mb-4 leading-relaxed">Cette formation m'a permis de développer un esprit analytique et rigoureux — des qualités que je mobilise encore aujourd'hui dans mon approche de la gestion et de la finance.</p>
-                            <ul class="space-y-3 text-sm text-[var(--text-muted)]">
-                                <li class="flex items-start gap-2">
-                                    <span class="text-[var(--accent)] mt-1">—</span>
-                                    <span>Développement d'un esprit analytique et rigoureux</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-[var(--accent)] mt-1">—</span>
-                                    <span>Statistiques, fonctions, physique-chimie</span>
-                                </li>
-                            </ul>
+                    <div class="accordion-item reveal">
+                        <div class="accordion-header edu">
+                            <div class="accordion-header-content">
+                                <div class="flex flex-wrap items-center gap-3 mb-2">
+                                    <span class="badge badge-edu">Formation</span>
+                                    <span class="text-sm text-[var(--text-muted)]">2020</span>
+                                </div>
+                                <h3 class="font-display text-xl font-bold">Baccalauréat Série Scientifique — Sciences Mathématiques</h3>
+                                <p class="text-[var(--accent)] font-medium">Lycée Albert Bauer — Conakry, Guinée</p>
+                            </div>
+                            <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-inner edu">
+                                <p class="text-sm text-[var(--text-muted)] mb-4 leading-relaxed">Cette formation m'a permis de développer un esprit analytique et rigoureux — des qualités que je mobilise encore aujourd'hui dans mon approche de la gestion et de la finance.</p>
+                                <ul class="space-y-3 text-sm text-[var(--text-muted)]">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-[var(--accent)] mt-1">—</span>
+                                        <span>Développement d'un esprit analytique et rigoureux</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-[var(--accent)] mt-1">—</span>
+                                        <span>Statistiques, fonctions, physique-chimie</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-                    </div>
                 </div>
                 
                 <!-- Mobile Layout: Accordion Only -->
@@ -555,7 +552,7 @@
                 <div class="bg-gradient-to-r from-[var(--bg-warm)] to-[var(--bg-dark)] border border-[var(--border)] rounded-3xl p-12 md:p-16 flex flex-col md:flex-row items-center justify-between gap-8">
                     <div>
                         <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Parcours & expériences professionnelles</h2>
-                        <p class="text-[var(--text-muted)] max-w-md">Stages, emplois et engagements en Guinée et en France.</p>
+                        <p class="text-[var(--text-muted)] max-w-md">Expériences et engagements en Guinée et en France.</p>
                     </div>
                     <a href="experience.html" class="btn-primary text-lg px-10 py-4">
                         Voir mes expériences
