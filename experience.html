@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=5">
+    <link rel="stylesheet" href="styles.css?v=6">
 </head>
 <body>
     <div class="grain"></div>
@@ -85,11 +85,37 @@
 
         <!-- Expériences professionnelles -->
         <section class="py-12 sm:py-16 md:py-20 section-px lg:px-12">
-            <div class="max-w-4xl mx-auto w-full min-w-0">
+            <div class="max-w-7xl mx-auto w-full min-w-0">
                 <div class="reveal mb-8 sm:mb-10">
                     <h2 class="font-display text-xl sm:text-2xl md:text-3xl font-bold">Expériences professionnelles</h2>
-                    <p class="text-[var(--text-muted)] mt-2">Stages, emplois et activités entrepreneuriales.</p>
+                    <p class="text-[var(--text-muted)] mt-2">Expériences professionnelles et activités entrepreneuriales.</p>
                 </div>
+                
+                <!-- Desktop Layout: Images + Timeline + Accordion -->
+                <div class="hidden lg:grid lg:grid-cols-[300px_1px_1fr] gap-8">
+                    <!-- Images Column -->
+                    <div class="space-y-8">
+                        <img src="img/ravensara.jpg" alt="Ravensera" class="w-full h-48 object-cover rounded-2xl shadow-lg">
+                        <img src="img/ninkasi.jpg" alt="Ninkasi" class="w-full h-48 object-cover rounded-2xl shadow-lg">
+                        <img src="img/Orange.jpg" alt="Orange Guinée" class="w-full h-48 object-cover rounded-2xl shadow-lg">
+                        <img src="img/compta.webp" alt="Freelance" class="w-full h-48 object-cover rounded-2xl shadow-lg">
+                        <img src="img/saticom.jpg" alt="Saticom" class="w-full h-48 object-cover rounded-2xl shadow-lg">
+                    </div>
+                    
+                    <!-- Timeline Column -->
+                    <div class="relative">
+                        <div class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-[var(--border)] transform -translate-x-1/2"></div>
+                        <div class="absolute left-1/2 top-0 bottom-0 space-y-48 transform -translate-x-1/2">
+                            <div class="w-4 h-4 rounded-full bg-[var(--accent)] border-4 border-[var(--bg-dark)]"></div>
+                            <div class="w-4 h-4 rounded-full bg-[var(--accent)] border-4 border-[var(--bg-dark)]"></div>
+                            <div class="w-4 h-4 rounded-full bg-[var(--accent)] border-4 border-[var(--bg-dark)]"></div>
+                            <div class="w-4 h-4 rounded-full bg-[var(--accent)] border-4 border-[var(--bg-dark)]"></div>
+                            <div class="w-4 h-4 rounded-full bg-[var(--accent)] border-4 border-[var(--bg-dark)]"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Accordion Column -->
+                    <div class="space-y-6">
                 
                 <!-- Ravensera -->
                 <div class="accordion-item reveal">
@@ -319,6 +345,242 @@
                             </ul>
                         </div>
                     </div>
+                </div>
+                    </div>
+                </div>
+                
+                <!-- Mobile Layout: Accordion Only -->
+                <div class="lg:hidden max-w-4xl mx-auto">
+                
+                <!-- Ravensera -->
+                <div class="accordion-item reveal">
+                    <div class="accordion-header pro">
+                        <div class="accordion-header-content">
+                            <div class="flex flex-wrap items-center gap-3 mb-2">
+                                <span class="badge badge-pro">Poste actuel</span>
+                                <span class="text-sm text-[var(--text-muted)]">France</span>
+                            </div>
+                            <h3 class="font-display text-xl font-bold">Business Developer</h3>
+                            <p class="text-[var(--accent)] font-medium">Ravensera (Artémus & 24 Terre)</p>
+                        </div>
+                        <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-inner pro">
+                            <p class="text-sm text-[var(--text-muted)] mb-4 leading-relaxed">Entreprise entrepreneuriale autour de deux marques complémentaires : Artémus (brasserie artisanale) et 24 Terre (torréfaction). Une immersion concrète dans l'entrepreneuriat qui nourrit mon ambition de créer mon propre cabinet de conseil.</p>
+                            <ul class="space-y-3 text-sm text-[var(--text-muted)]">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-[var(--accent)] mt-1">—</span>
+                                    <span>Prospection et développement de nouveaux clients et partenaires B2B</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-[var(--accent)] mt-1">—</span>
+                                    <span>Fidélisation du portefeuille clients et suivi des relations commerciales</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-[var(--accent)] mt-1">—</span>
+                                    <span>Participation à la stratégie commerciale des deux marques</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-[var(--accent)] mt-1">—</span>
+                                    <span>Analyse du marché et identification des opportunités de croissance</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Ninkasi -->
+                <div class="accordion-item reveal">
+                    <div class="accordion-header pro">
+                        <div class="accordion-header-content">
+                            <div class="flex flex-wrap items-center gap-3 mb-2">
+                                <span class="badge badge-pro">Stage</span>
+                                <span class="text-sm text-[var(--text-muted)]">Mars – Avr. 2026</span>
+                            </div>
+                            <h3 class="font-display text-xl font-bold">Assistant Cost Controller</h3>
+                            <p class="text-[var(--accent)] font-medium">Ninkasi Cordeliers — Lyon, France</p>
+                        </div>
+                        <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-inner pro">
+                            <ul class="space-y-3 text-sm text-[var(--text-muted)]">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-[var(--accent)] mt-1">—</span>
+                                    <span>Lancement et suivi des commandes</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-[var(--accent)] mt-1">—</span>
+                                    <span>Suivi et contrôle des stocks</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-[var(--accent)] mt-1">—</span>
+                                    <span>Inventaires et analyse des écarts</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Orange Guinée -->
+                <div class="accordion-item reveal">
+                    <div class="accordion-header pro">
+                        <div class="accordion-header-content">
+                            <div class="flex flex-wrap items-center gap-3 mb-2">
+                                <span class="badge badge-pro">Stage</span>
+                                <span class="text-sm text-[var(--text-muted)]">Jan. – Juin 2025</span>
+                            </div>
+                            <h3 class="font-display text-xl font-bold">Assistant Comptable</h3>
+                            <p class="text-[var(--accent)] font-medium">Orange Guinée SA — Conakry</p>
+                        </div>
+                        <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-inner pro">
+                            <p class="text-sm text-[var(--text-muted)] mb-4 leading-relaxed">Leader des télécommunications en Guinée (65,9 % des parts de marché mobile, 13,5 millions d'abonnés). Une structure multinationale exigeante qui m'a appris la rigueur des grands groupes.</p>
+                            <ul class="space-y-3 text-sm text-[var(--text-muted)]">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-[var(--accent)] mt-1">—</span>
+                                    <span>Traitement et vérification des factures fournisseurs</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-[var(--accent)] mt-1">—</span>
+                                    <span>Rapprochements bancaires et analyse des écarts sur Excel</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-[var(--accent)] mt-1">—</span>
+                                    <span>Suivi mensuel des amortissements d'équipements</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-[var(--accent)] mt-1">—</span>
+                                    <span>Participation aux clôtures comptables périodiques</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-[var(--accent)] mt-1">—</span>
+                                    <span>Utilisation du logiciel Oracle eBusiness</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Freelance -->
+                <div class="accordion-item reveal">
+                    <div class="accordion-header pro">
+                        <div class="accordion-header-content">
+                            <div class="flex flex-wrap items-center gap-3 mb-2">
+                                <span class="badge badge-pro">Freelance</span>
+                                <span class="text-sm text-[var(--text-muted)]">2023 – 2024</span>
+                            </div>
+                            <h3 class="font-display text-xl font-bold">Services Digitaux</h3>
+                            <p class="text-[var(--accent)] font-medium">Conakry, Guinée</p>
+                        </div>
+                        <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-inner pro">
+                            <ul class="space-y-3 text-sm text-[var(--text-muted)]">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-[var(--accent)] mt-1">—</span>
+                                    <span>Prospection commerciale et développement du portefeuille clients</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-[var(--accent)] mt-1">—</span>
+                                    <span>Étude de marché et analyse des besoins clients</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-[var(--accent)] mt-1">—</span>
+                                    <span>Community management et création de contenu</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-[var(--accent)] mt-1">—</span>
+                                    <span>Création de sites web via outils no-code et IA</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Saticom -->
+                <div class="accordion-item reveal">
+                    <div class="accordion-header pro">
+                        <div class="accordion-header-content">
+                            <div class="flex flex-wrap items-center gap-3 mb-2">
+                                <span class="badge badge-pro">Stage</span>
+                                <span class="text-sm text-[var(--text-muted)]">6 semaines · 2024</span>
+                            </div>
+                            <h3 class="font-display text-xl font-bold">Assistant Comptable & Gestion de Stock</h3>
+                            <p class="text-[var(--accent)] font-medium">Saticom — Conakry, Guinée</p>
+                        </div>
+                        <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-inner pro">
+                            <p class="text-sm text-[var(--text-muted)] mb-4 leading-relaxed">Start-up guinéenne spécialisée dans les équipements informatiques. Voir une entreprise construite de zéro par un jeune entrepreneur m'a profondément inspiré.</p>
+                            <ul class="space-y-3 text-sm text-[var(--text-muted)]">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-[var(--accent)] mt-1">—</span>
+                                    <span>Traitement des factures clients et fournisseurs, suivi des paiements</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-[var(--accent)] mt-1">—</span>
+                                    <span>Gestion du portefeuille clients et relations commerciales</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-[var(--accent)] mt-1">—</span>
+                                    <span>Contrôle des stocks — suivi des entrées/sorties et réapprovisionnement</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Boulangerie -->
+                <div class="accordion-item reveal">
+                    <div class="accordion-header pro">
+                        <div class="accordion-header-content">
+                            <div class="flex flex-wrap items-center gap-3 mb-2">
+                                <span class="badge badge-pro">Emploi</span>
+                                <span class="text-sm text-[var(--text-muted)]">Nov. 2023 – Avr. 2024</span>
+                            </div>
+                            <h3 class="font-display text-xl font-bold">Caissier & Gestionnaire</h3>
+                            <p class="text-[var(--accent)] font-medium">Boulangerie — Conakry, Guinée</p>
+                        </div>
+                        <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-inner pro">
+                            <p class="text-sm text-[var(--text-muted)] mb-4 leading-relaxed">Une expérience terrain en dehors de mon domaine d'études, mais essentielle. Elle m'a appris à gérer des responsabilités concrètes dans un environnement à rythme soutenu.</p>
+                            <ul class="space-y-3 text-sm text-[var(--text-muted)]">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-[var(--accent)] mt-1">—</span>
+                                    <span>Gestion de caisse — transactions journalières et suivi des encaissements</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-[var(--accent)] mt-1">—</span>
+                                    <span>Suivi des stocks et passation des commandes fournisseurs</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-[var(--accent)] mt-1">—</span>
+                                    <span>Coordination de l'équipe de livraison</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
                 </div>
             </div>
         </section>
